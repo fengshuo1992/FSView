@@ -15,6 +15,9 @@
 		82957E4D20A302DE006B8650 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 82957E4C20A302DE006B8650 /* main.m */; };
 		82957E5720A302DE006B8650 /* FSViewTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 82957E5620A302DE006B8650 /* FSViewTests.m */; };
 		82957E6220A302DE006B8650 /* FSViewUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 82957E6120A302DE006B8650 /* FSViewUITests.m */; };
+		82957E7120A30303006B8650 /* FSScreenView.m in Sources */ = {isa = PBXBuildFile; fileRef = 82957E7020A30303006B8650 /* FSScreenView.m */; };
+		82957E7420A30FB3006B8650 /* libz.1.1.3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 82957E7320A30FB3006B8650 /* libz.1.1.3.tbd */; };
+		82B4268F20A3EF5000CC5CEE /* NSObject+FSName.m in Sources */ = {isa = PBXBuildFile; fileRef = 82B4268E20A3EF5000CC5CEE /* NSObject+FSName.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +54,11 @@
 		82957E5D20A302DE006B8650 /* FSViewUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FSViewUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		82957E6120A302DE006B8650 /* FSViewUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FSViewUITests.m; sourceTree = "<group>"; };
 		82957E6320A302DE006B8650 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		82957E6F20A30303006B8650 /* FSScreenView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FSScreenView.h; sourceTree = "<group>"; };
+		82957E7020A30303006B8650 /* FSScreenView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FSScreenView.m; sourceTree = "<group>"; };
+		82957E7320A30FB3006B8650 /* libz.1.1.3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.1.1.3.tbd; path = usr/lib/libz.1.1.3.tbd; sourceTree = SDKROOT; };
+		82B4268D20A3EF5000CC5CEE /* NSObject+FSName.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSObject+FSName.h"; sourceTree = "<group>"; };
+		82B4268E20A3EF5000CC5CEE /* NSObject+FSName.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSObject+FSName.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +66,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				82957E7420A30FB3006B8650 /* libz.1.1.3.tbd in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -85,6 +94,7 @@
 				82957E5520A302DE006B8650 /* FSViewTests */,
 				82957E6020A302DE006B8650 /* FSViewUITests */,
 				82957E3B20A302DE006B8650 /* Products */,
+				82957E7220A30FB2006B8650 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -105,6 +115,10 @@
 				82957E3E20A302DE006B8650 /* AppDelegate.m */,
 				82957E4020A302DE006B8650 /* ViewController.h */,
 				82957E4120A302DE006B8650 /* ViewController.m */,
+				82957E6F20A30303006B8650 /* FSScreenView.h */,
+				82957E7020A30303006B8650 /* FSScreenView.m */,
+				82B4268D20A3EF5000CC5CEE /* NSObject+FSName.h */,
+				82B4268E20A3EF5000CC5CEE /* NSObject+FSName.m */,
 				82957E4320A302DE006B8650 /* Main.storyboard */,
 				82957E4620A302DE006B8650 /* Assets.xcassets */,
 				82957E4820A302DE006B8650 /* LaunchScreen.storyboard */,
@@ -130,6 +144,14 @@
 				82957E6320A302DE006B8650 /* Info.plist */,
 			);
 			path = FSViewUITests;
+			sourceTree = "<group>";
+		};
+		82957E7220A30FB2006B8650 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				82957E7320A30FB3006B8650 /* libz.1.1.3.tbd */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -266,8 +288,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				82957E4220A302DE006B8650 /* ViewController.m in Sources */,
+				82957E7120A30303006B8650 /* FSScreenView.m in Sources */,
 				82957E4D20A302DE006B8650 /* main.m in Sources */,
 				82957E3F20A302DE006B8650 /* AppDelegate.m in Sources */,
+				82B4268F20A3EF5000CC5CEE /* NSObject+FSName.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -431,6 +455,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
 				INFOPLIST_FILE = FSView/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = aaaa.FSView;
@@ -444,6 +469,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
 				INFOPLIST_FILE = FSView/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = aaaa.FSView;

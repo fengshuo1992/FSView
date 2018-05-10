@@ -7,6 +7,8 @@
 //
 
 #import "ViewController.h"
+#import "FSScreenView.h"
+#import "NSObject+FSName.h"
 
 @interface ViewController ()
 
@@ -16,6 +18,19 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    
+    NSObject * object = [[NSObject alloc] init];
+    object.name = @"1234";
+    NSLog(@"%@", object.name);
+    
+    
+    
+   FSScreenView * view = [[FSScreenView alloc] initWithFrame:CGRectMake(0, 0, 80, 80)];
+    [self.view addSubview:view];
+
+    
+    
     // Do any additional setup after loading the view, typically from a nib.
 }
 
